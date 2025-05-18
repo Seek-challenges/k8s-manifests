@@ -9,7 +9,8 @@ image:
   pullPolicy: IfNotPresent
   tag: 1.0.0-release-005
 
-imagePullSecrets: []
+imagePullSecrets:
+  - name: ecr-secret
 nameOverride: ""
 fullnameOverride: ""
 
