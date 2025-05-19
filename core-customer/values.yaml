@@ -7,7 +7,7 @@ replicaCount: 1
 image:
   repository: 119944160132.dkr.ecr.us-east-2.amazonaws.com/core-customer
   pullPolicy: IfNotPresent
-  tag: 1.0.0-release-015
+  app_tag: 1.0.0-release-015
 
 imagePullSecrets:
   - name: ecr-secret
@@ -46,7 +46,7 @@ redis:
   image:
     registry: docker.io
     repository: library/redis
-    tag: 1.0.0-release-015
+    tag: latest
     pullPolicy: IfNotPresent
   architecture: standalone
   auth:
