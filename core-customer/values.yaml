@@ -43,7 +43,6 @@ securityContext: {}
 
 redis:
     host: redis
-    port: 6379
 
 service:
   type: ClusterIP
