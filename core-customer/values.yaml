@@ -80,3 +80,5 @@ redis:
   master:
     persistence:
       enabled: false
+
+terminationGracePeriodSeconds: 30
