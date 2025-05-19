@@ -43,15 +43,12 @@ securityContext: {}
 
 redis:
   host: core-customer-redis-master
-  image:
-    registry: docker.io
-    repository: library/redis
-    tag: latest
-    pullPolicy: IfNotPresent
   architecture: standalone
   auth:
     enabled: false
-
+  master:
+    persistence:
+      enabled: false
 service:
   type: ClusterIP
   port: 8080
