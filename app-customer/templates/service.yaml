@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ include "core-customer.fullname" . }}
+  name: {{ include "app-customer.fullname" . }}
   labels:
-    {{- include "core-customer.labels" . | nindent 4 }}
+    {{- include "app-customer.labels" . | nindent 4 }}
 spec:
   type: {{ .Values.service.type }}
   ports:
@@ -12,4 +12,4 @@ spec:
       protocol: TCP
       name: http
   selector:
-    {{- include "core-customer.selectorLabels" . | nindent 4 }}
+    {{- include "app-customer.selectorLabels" . | nindent 4 }}

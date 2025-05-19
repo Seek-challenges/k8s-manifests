@@ -1,18 +1,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "core-customer.fullname" . }}
+  name: {{ include "app-customer.fullname" . }}
   labels:
-    {{- include "core-customer.labels" . | nindent 4 }}
+    {{- include "app-customer.labels" . | nindent 4 }}
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      {{- include "core-customer.selectorLabels" . | nindent 6 }}
+      {{- include "app-customer.selectorLabels" . | nindent 6 }}
   template:
     metadata:
       labels:
-        {{- include "core-customer.labels" . | nindent 8 }}
+        {{- include "app-customer.labels" . | nindent 8 }}
         {{- with .Values.podLabels }}
         {{- toYaml . | nindent 8 }}
         {{- end }}
@@ -27,7 +27,7 @@ spec:
         {{- toYaml . | nindent 8 }}
       {{- end }}
       {{- if .Values.serviceAccount.create }}
-      serviceAccountName: {{ include "core-customer.serviceAccountName" . }}
+      serviceAccountName: {{ include "app-customer.serviceAccountName" . }}
       {{- end }}
       {{- with .Values.podSecurityContext }}
       securityContext:
