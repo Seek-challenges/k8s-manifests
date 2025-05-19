@@ -7,7 +7,7 @@ replicaCount: 1
 image:
   repository: 119944160132.dkr.ecr.us-east-2.amazonaws.com/app-customer
   pullPolicy: IfNotPresent
-  app_tag: 1.0.0-release-003
+  app_tag: 1.0.0-release-004
 
 imagePullSecrets:
   - name: ecr-secret
