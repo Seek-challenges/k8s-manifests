@@ -44,9 +44,6 @@ spec:
           envFrom:
             - secretRef:
                 name: {{ .Values.secretRef }}
-          env:
-            - name: REDIS_HOST_2
-              value: {{ .Values.redis.host | quote }}
           livenessProbe:
             {{- toYaml .Values.livenessProbe | nindent 12 }}
           readinessProbe:

@@ -41,9 +41,6 @@ securityContext: {}
   # runAsNonRoot: true
   # runAsUser: 1000
 
-redis:
-    host: redis
-
 service:
   type: ClusterIP
   port: 8080
